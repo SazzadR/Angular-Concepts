@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>AngularJS Weathet Forcast SPA</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" type="text/javascript"></script>
+	<script src="//code.angularjs.org/1.5.8/angular-route.min.js" type="text/javascript"></script>
+	<script src="//code.angularjs.org/1.5.8/angular-resource.min.js" type="text/javascript"></script>
+	<script src="app.js" type="text/javascript"></script>
+</head>
+<body ng-app="weatherApp">
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="/" class="navbar-brand">AngularJS Weather</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#/"><i class="fa fa-home"></i>Home</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<div class="container">
+		<div ng-view></div>
+	</div>
+</body>
+</html>
