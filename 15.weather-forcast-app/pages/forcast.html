@@ -1,1 +1,20 @@
-Forcast for: {{ cityname }}
+<h2>Weather Forcast for: {{ cityname }}</h2>
+
+<div ng-repeat="weatherResult in weatherResults.data.weather">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">{{ weatherResult.date }}</h3>
+				</div>
+				<div class="panel-body">
+					<b>Weather Type:</b> {{ weatherResult.weatherDesc[0].value }} <br>
+					<b>Max Temperature:</b> {{ weatherResult.tempMaxC }}&#8451 <br>
+					<b>Min Temperature:</b> {{ weatherResult.tempMinC }}&#8451 <br>
+					<b>Wind Speed:</b> {{ weatherResult.windspeedKmph }} Kmph <br>
+					<b>Wind Direction:</b> {{ weatherResult.winddirection }}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
