@@ -35,3 +35,13 @@ weatherApp.controller('forcastController', ['$scope', '$resource', 'cityService'
 
 	$scope.weatherResults = $scope.weatherAPI.get({ format: 'JSON', num_of_days: 2 });
 }]);
+
+weatherApp.directive('weatherReport', function () {
+	return {
+		templateUrl: 'directives/weatherReport.html',
+		replace: true,
+		scope: {
+			weatherResult: '='
+		}
+	}
+});
